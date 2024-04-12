@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    /* Custom CSS for image sizes */
+    .full-width-img {
+      width: 100%;
+      height: auto;
+    }
+
+    .half-width-img {
+      width: 50%;
+      height: auto;
+    }
+
+    /* Custom CSS for card layout */
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card-content img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%;">Dealerships</h2>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger;" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-size: larger;" href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <div class="card" style="margin-top: 5%;">
+        <div class="banner" name="about-header">
+          <!-- Insert header information here -->
+          <h1>Contact Us</h1>
+        </div>
+        <div class="card-content">
+          <img class="full-width-img" src="/static/cars.jpeg" alt="Car image">
+          <div style="display: flex; justify-content: space-between;">
+            <div style="flex: 1;">
+              <img class="half-width-img" src="/static/contactus.png" alt="Contact image">
+            </div>
+            <div style="flex: 1;">
+              <div class="card-body">
+                <h5 class="card-title">Contact Information</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Advertising: bestcarsAdvertising@email.com</li>
+                  <li class="list-group-item">Customer Service: 123-456-7890</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
