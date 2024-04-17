@@ -9,7 +9,7 @@ class CarMake(models.Model):
     description = models.TextField()
 
     def __str__(self):
-        return self.name  # Return the name as the string representation
+        return self.name  # Ensure no trailing whitespace after this line
 
 
 class CarModel(models.Model):
@@ -27,14 +27,14 @@ class CarModel(models.Model):
         max_length=10, 
         choices=CAR_TYPES, 
         default='SUV'
-    )
+    )  # Ensure no trailing whitespace after this line
     year = models.IntegerField(
         default=2023,
         validators=[
             MaxValueValidator(2023),
             MinValueValidator(2015)
         ]
-    )
+    )  # Ensure no trailing whitespace after this line
 
     def __str__(self):
         return self.name  # Return the name as the string representation
