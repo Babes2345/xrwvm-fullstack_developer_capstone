@@ -55,7 +55,7 @@ def registration(request):
     )
     login(request, user)
     return JsonResponse({
-        'userName': username, 
+        'userName': username,
         'status': 'Registered and logged in'
     })
 
