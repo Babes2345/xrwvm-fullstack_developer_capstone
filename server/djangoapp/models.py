@@ -14,7 +14,7 @@ class CarMake(models.Model):
 
 class CarModel(models.Model):
     car_make = models.ForeignKey(
-        CarMake, 
+        CarMake,
         on_delete=models.CASCADE
     )
     name = models.CharField(max_length=100)
@@ -24,8 +24,8 @@ class CarModel(models.Model):
         ('WAGON', 'Wagon'),
     ]
     type = models.CharField(
-        max_length=10, 
-        choices=CAR_TYPES, 
+        max_length=10,
+        choices=CAR_TYPES,
         default='SUV'
     )  # Ensure no trailing whitespace after this line
     year = models.IntegerField(
