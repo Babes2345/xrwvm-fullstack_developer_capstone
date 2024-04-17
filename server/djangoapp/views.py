@@ -10,6 +10,7 @@ from .populate import initiate  # Ensure this is defined in your populate.py
 
 logger = logging.getLogger(__name__)
 
+
 @csrf_exempt
 def login_user(request):
     data = json.loads(request.body)
