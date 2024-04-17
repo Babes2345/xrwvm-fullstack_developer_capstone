@@ -20,12 +20,12 @@ def login_user(request):
     if user:
         login(request, user)
         response_data = {
-            'userName': username, 
+            'userName': username,
             'status': 'Authenticated'
         }
         return JsonResponse(response_data)
     return JsonResponse({
-        'userName': username, 
+        'userName': username,
         'status': 'Authentication failed'
     })
 
@@ -42,8 +42,11 @@ def logout_request(request):
 @csrf_exempt
 def registration(request):
     data = json.loads(request.body)
-    username, password = data['userName'], data['password']
-    first_name, last_name, email = data['firstName'], data['lastName'], data['email']
+    username = data['userName']
+    password = data['password']
+    first_name = data['firstName']
+    last_name = data['lastName']
+    email = data['email']
     if User.objects.filter(username=username).exists():
         return JsonResponse({'error': 'Username exists'}, status=400)
     user = User.objects.create_user(
