@@ -1,21 +1,31 @@
 import os
 from pathlib import Path
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = (
+    'django-insecure-ccow$tz_=9%dxu4(0%^(z%nx32#s@(zt9$ih@)5l54yny)wm-0'
+)
+
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'babesandrew-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
-    'babesandrew-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    ('babesandrew-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.'
+     'cognitiveclass.ai'),
+    ('babesandrew-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.'
+     'cognitiveclass.ai')
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://babesandrew-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai',
-    'https://babesandrew-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    ('https://babesandrew-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.'
+     'cognitiveclass.ai'),
+    ('https://babesandrew-8000.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.'
+     'cognitiveclass.ai')
 ]
 
 REST_FRAMEWORK = {
