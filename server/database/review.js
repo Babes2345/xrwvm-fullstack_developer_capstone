@@ -1,7 +1,4 @@
-/* eslint-disable */
-
-// Add ES6 support
-/* eslint-env es6 */
+/* jshint esversion: 6 */
 
 // Require Mongoose module
 const mongoose = require('mongoose');
